@@ -1,6 +1,6 @@
 import React from 'react'
-import { BaseInput, PasswordInput } from '../../components/Global/Inputs'
-import AppButton from '../../components/Global/Buttons'
+import { BaseInput, PasswordInput } from '../components/Inputs'
+import AppButton from '../components/Buttons'
 import { Link } from 'react-router-dom'
 
 function OtherSignUpContainer() {

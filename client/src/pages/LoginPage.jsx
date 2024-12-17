@@ -1,6 +1,6 @@
 import React from 'react'
-import LoginContainer from '../../containers/Common/LoginContainer'
-import Footer from '../../components/Common/Footer'
+import LoginContainer from '../containers/LoginContainer'
+import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 
 function LoginPage() {

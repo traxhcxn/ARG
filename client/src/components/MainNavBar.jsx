@@ -1,5 +1,5 @@
 import React from 'react'
-import AppButton from '../Global/Buttons'
+import AppButton from './Buttons'
 import { Link } from 'react-router-dom'
 
 function MainNavBar() {

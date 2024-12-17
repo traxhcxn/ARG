@@ -1,6 +1,6 @@
 import React from 'react'
-import { BaseInput, BigInput } from '../../components/Global/Inputs'
-import AppButton from '../../components/Global/Buttons'
+import { BaseInput, BigInput } from '../components/Inputs'
+import AppButton from '../components/Buttons'
 
 function ContactContainer() {
   return (

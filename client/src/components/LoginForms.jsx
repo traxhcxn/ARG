@@ -1,6 +1,6 @@
 import React from 'react'
-import { BaseInput, Checkbox, PasswordInput } from '../Global/Inputs'
-import AppButton from '../Global/Buttons'
+import { BaseInput, Checkbox, PasswordInput } from '../components/Inputs'
+import AppButton from './Buttons'
 
 export function OtherLoginForm() {
     return (

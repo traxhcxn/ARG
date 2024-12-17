@@ -1,7 +1,7 @@
 import React from 'react'
-import SignUpNavBar from '../../components/Common/SignUpNavBar'
-import OtherSignUpContainer from '../../containers/Common/OtherSignUpContainer'
-import Footer from '../../components/Common/Footer'
+import SignUpNavBar from '../components/SignUpNavBar'
+import OtherSignUpContainer from '../containers/OtherSignUpContainer'
+import Footer from '../components/Footer'
 
 function SignUpPageOther() {
   return (

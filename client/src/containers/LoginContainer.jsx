@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { AdminLoginForm, OtherLoginForm } from '../../components/Common/LoginForms'
+import { AdminLoginForm, OtherLoginForm } from '../components/LoginForms'
 import { useState } from 'react'
 
 function LoginContainer() {
