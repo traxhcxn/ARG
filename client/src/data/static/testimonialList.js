@@ -1,4 +1,4 @@
-import profileIcon from '../assets/icons/testProfile.png'
+import profileIcon from '../../assets/icons/testProfile.png'
 
 const testimonialList = [
     {

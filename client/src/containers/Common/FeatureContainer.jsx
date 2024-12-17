@@ -1,6 +1,6 @@
 import React from 'react'
-import features from '../data/featureList'
-import { FeatureCard } from '../components/Cards'
+import features from '../../data/static/featureList'
+import { FeatureCard } from '../../components/Global/Cards'
 
 function FeatureContainer() {
     return (

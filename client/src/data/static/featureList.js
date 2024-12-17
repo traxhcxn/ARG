@@ -1,9 +1,9 @@
-import dataCollection from "../assets/icons/dataCollection.png"
-import dataVisual from "../assets/icons/dataVisual.png"
-import reportCustom from "../assets/icons/reportCustom.png"
-import dashboard from "../assets/icons/dashboard.png"
-import friendlyUI from "../assets/icons/friendlyUI.png"
-import accessAnywhere from "../assets/icons/accessAnywhere.png"
+import dataCollection from "../../assets/icons/dataCollection.png"
+import dataVisual from "../../assets/icons/dataVisual.png"
+import reportCustom from "../../assets/icons/reportCustom.png"
+import dashboard from "../../assets/icons/dashboard.png"
+import friendlyUI from "../../assets/icons/friendlyUI.png"
+import accessAnywhere from "../../assets/icons/accessAnywhere.png"
 
 const venueDetails = [
     {

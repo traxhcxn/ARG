@@ -1,6 +1,6 @@
 import React from 'react'
-import testimonialList from '../data/testimonialList'
-import { TestimonialCard } from '../components/Cards'
+import testimonialList from '../../data/static/testimonialList'
+import { TestimonialCard } from '../../components/Global/Cards'
 
 function TestimonialContainer() {
   return (
