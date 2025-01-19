@@ -1,12 +1,12 @@
 import React from 'react'
 import { BaseInput, PasswordInput } from '../components/Inputs'
-import AppButton from '../components/Buttons'
+import {AppButton} from '../components/Buttons'
 import { Link } from 'react-router-dom'
 
 function OtherSignUpContainer() {
 	return (
 		<div className='h-full bg-secondary w-1/3 flex flex-col gap-6 items-center px-14 py-10 rounded-3xl my-28'>
-			<p className='text-xl'>Sign up as Department Admin / Staff</p>
+			<p className='text-xl'>Staff Sign Up</p>
 			<BaseInput placeholder={"First Name"} className={"w-full"} />
 			<BaseInput placeholder={"Last Name"} className={"w-full"} />
 			<BaseInput placeholder={"Email Address"} className={"w-full"} />

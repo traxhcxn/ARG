@@ -1,8 +1,11 @@
 import React from 'react'
-import AppButton from './Buttons'
+import {AppButton} from './Buttons'
 import { Link } from 'react-router-dom'
 
 function MainNavBar() {
+    const scrollTo = (id) => {
+        document.getElementById(id)?.scrollIntoView({behaviour: 'smooth'})
+    }
     return (
         <div className="navbar bg-base-100 px-10 fixed z-10">
             <div className="navbar-start">
@@ -12,9 +15,9 @@ function MainNavBar() {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>HOME</a></li>
-                    <li><a>ABOUT</a></li>
-                    <li><a>CONTACT</a></li>
+                    <li><Link to={'/'}>HOME</Link></li>
+                    <li><a onClick={()=>scrollTo('about')}>ABOUT</a></li>
+                    <li><a onClick={()=>scrollTo('contact')}>CONTACT</a></li>
                 </ul>
             </div>
             <div className="navbar-end flex gap-3">

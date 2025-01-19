@@ -1,10 +1,10 @@
 import React from 'react'
 import { BaseInput, BigInput } from '../components/Inputs'
-import AppButton from '../components/Buttons'
+import {AppButton} from '../components/Buttons'
 
-function ContactContainer() {
+function ContactContainer({id}) {
   return (
-    <div className='px-20 my-10 bg-secondary py-10'>
+    <div className='px-20 my-10 bg-secondary py-10' id={id}>
         <h2 className='text-3xl font-bold'>Contact Us</h2>
         <div className='flex mt-5 gap-16'>
             <div className='flex flex-col gap-3 items-center'>

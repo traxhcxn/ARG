@@ -1,5 +1,5 @@
 import React from 'react'
-import AppButton from '../components/Buttons'
+import {AppButton} from '../components/Buttons'
 import { Link } from 'react-router-dom'
 
 function Hero() {

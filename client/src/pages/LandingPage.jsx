@@ -14,8 +14,8 @@ function LandingPage() {
         <Hero />
         <FeatureContainer />
         <TestimonialContainer />
-        <AboutContainer />
-        <ContactContainer />
+        <AboutContainer id={'about'}/>
+        <ContactContainer id={'contact'}/>
         <Footer />
     </div>
   )

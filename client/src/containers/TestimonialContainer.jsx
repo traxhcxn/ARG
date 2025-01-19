@@ -10,7 +10,7 @@ function TestimonialContainer() {
             <p>Hear from those who transformed their reporting journey: Real Stories of Success, Impact and Smarter Solutions in Action!</p>
         </div>
         <div className='carousel carousel-center bg-base-100 w-full space-x-10 py-4 mt-5'>
-          {testimonialList.map((t) => (<TestimonialCard className={"carousel-item"} testimonial={t.testimonial} testimonialProfileIcon={t.testimonialProfileIcon} testimonialAccount={t.testimonalAccount} testimonialRole={t.testimonialRole} testimonialInstitution={t.testimonialInstitution} />))}
+          {testimonialList.map((t) => (<TestimonialCard className={"carousel-item"} testimonial={t.testimonial} testimonialProfileIcon={t.testimonialProfileIcon} testimonialAccount={t.testimonialAccount} testimonialRole={t.testimonialRole} testimonialInstitution={t.testimonialInstitution} />))}
         </div>
     </div>
   )

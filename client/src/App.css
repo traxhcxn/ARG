@@ -1,0 +1,36 @@
+.userNavBar{
+    left: 16.666667%;
+}
+
+.menuItem{
+    background-color: #ffffff;
+    transition: background-color 0.5s;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menuItem:hover{
+    background-color: #d9d9d9;
+}
+.menuItem:active{
+    border-left: 3px solid black;
+}
+
+.profileIcon{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+}
+.profileIcon:hover{
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.guideH2{
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.guideH3{
+    font-weight: 500;
+    font-size: 17px;
+}

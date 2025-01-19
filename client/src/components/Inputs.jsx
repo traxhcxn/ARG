@@ -1,17 +1,26 @@
 import React from 'react'
 
-export function BaseInput({ placeholder, className, label }) {
+export function BaseInput({ placeholder, className, label, value, onValueChange }) {
   return (
     <div className='w-full'>
       <p className='ml-1'>{label}</p>
-      <input type="text" placeholder={placeholder} className={`input input-bordered ${className}`} />
+      <input type="text" placeholder={placeholder} className={`input input-bordered ${className}`} value={value} onChange={onValueChange} />
+    </div>
+  )
+}
+
+export function SettingsBaseInput({ placeholder, className, label, value, onValueChange }) {
+  return (
+    <div className='w-full flex items-center gap-3'>
+      <p>{label}</p>
+      <input type="text" placeholder={placeholder} className={`input input-bordered ${className} w-96`} value={value} onChange={onValueChange} />
     </div>
   )
 }
 
 export function BigInput({ placeholder, className, label }) {
   return (
-    <div>
+    <div className='w-full'>
       <p className='ml-1'>{label}</p>
       <textarea placeholder={placeholder} className={`textarea textarea-bordered textarea-lg text-[16px] ${className}`}></textarea>
     </div>
@@ -36,7 +45,17 @@ export function PasswordInput({ placeholder }) {
   )
 }
 
-export function Checkbox({label, className}) {
+export function SettingsPasswordInput({ label, placeholder }) {
+  return (
+    <div className='flex justify-between items-center w-full'>
+      <p>{label}</p>
+      <input type="password" placeholder={placeholder} className='input input-bordered w-96'/>
+    </div>
+  )
+}
+
+
+export function Checkbox({ label, className }) {
   return (
     <div className={`form-control ${className}`}>
       <div className="cursor-pointer flex gap-1">

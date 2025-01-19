@@ -1,6 +1,6 @@
 import React from 'react'
 import { BaseInput, PasswordInput } from '../components/Inputs'
-import AppButton from '../components/Buttons'
+import {AppButton} from '../components/Buttons'
 import { Link } from 'react-router-dom'
 
 function SignUpContainer() {
@@ -29,7 +29,7 @@ function SignUpContainer() {
 				</dialog>
 				<hr className='bg-[#B2B2B2] h-1' />
 				<div className='flex gap-1 justify-center'>
-					<p>Not an Institution admin?</p>
+					<p>Not an admin?</p>
 					<Link to={'/sign-up/other-users'}><a className='cursor-pointer'>Sign Up Here</a></Link>
 				</div>
 			</div>
