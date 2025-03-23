@@ -77,9 +77,9 @@ function InstitutionAnalyticsContainer() {
 							{file && (
 								<div>
 									<div className='w-full flex items-center justify-center bg-secondary h-10'><p><strong>Preview</strong> - {file.name}</p></div>
-									{fileType.includes("image") && (<img src={file.content} alt="Preview" className="w-1/2 border rounded-b-md" />)}
-									{fileType.includes("pdf") && (<iframe src={file.content} title="PDF Preview" className="w-full h-[690px] border" />)}
-									{fileType.includes("text") && (<pre className="bg-base-100 p-3 border rounded-b-md">{file.content}</pre>)}
+									{fileType.includes("image") && (<img src={file.content} alt="Preview" className="w-1/2 border rounded-b-md overflow-hidden" />)}
+									{fileType.includes("pdf") && (<iframe src={file.content} title="PDF Preview" className="w-full h-[690px] border overflow-hidden" />)}
+									{fileType.includes("text") && (<pre className="bg-base-100 p-3 border rounded-b-md overflow-hidden">{file.content}</pre>)}
 								</div>
 							)}
 						</div>
