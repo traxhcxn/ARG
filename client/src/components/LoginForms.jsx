@@ -11,11 +11,11 @@ export function OtherLoginForm({ formData, setFormData }) {
   }
   const [error, setError] = useState(null)
   const navigate = useNavigate()
-  const onLoginButtonClicked =  async () => {
-    try{
+  const onLoginButtonClicked = async () => {
+    try {
       const response = await staffLogin(formData)
-    navigate('/toStaffLoginTemp')
-    } catch(error) {
+      navigate('/staff')
+    } catch (error) {
       console.error("Login error: ", error)
       setError(error.message || "Login Failed")
     }
@@ -27,7 +27,6 @@ export function OtherLoginForm({ formData, setFormData }) {
       <PasswordInput placeholder={"Password"} name={"password"} value={formData.password} onValueChange={onDataChange} />
       <Checkbox label={"Remember me"} className={"mt-[-16px]"} />
       <AppButton btnText={"LOGIN"} className={"w-full mt-5"} onClick={onLoginButtonClicked} />
-      <Link to={'/staff'} id='toStaffLoginTemp'></Link>
     </div>
   )
 }
@@ -42,7 +41,7 @@ export function AdminLoginForm({ formData, setFormData }) {
     try {
       const response = await adminLogin(formData)
       navigate("/institution-admin")
-    } catch(error) {
+    } catch (error) {
       console.error("Login error", error)
       setError(error.message || "Login Failed")
     }
