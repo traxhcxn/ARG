@@ -35,14 +35,40 @@ export function AnalyticsCard({ source, authorName, role, institution }) {
   )
 }
 
-export function AdminAnalyticsCard({ source, className, defaultChecked, authorName, role, institution }) {
+export function AdminAnalyticsCard({
+  source,
+  title,
+  date,
+  isSelected,
+  onToggle
+}) {
   return (
-    <div className='flex gap-3 bg-base-100 p-5 rounded-xl border'>
-      <input type="checkbox" className={className} defaultChecked={defaultChecked} />
-      <img src={source} className='overflow-auto' />
+    <div className={`bg-white p-4 rounded-xl border-2 ${isSelected ? 'border-primary' : 'border-gray-200'} transition-all duration-200`}>
+      <div className='flex items-start gap-4'>
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={onToggle}
+          className="checkbox checkbox-primary mt-1"
+        />
+        <div className='flex-1'>
+          <div className='relative pb-[75%]'>
+            <img
+              src={source}
+              alt={title || 'Analytics chart'}
+              className='absolute w-full h-full object-contain'
+            />
+          </div>
+          <div className='mt-2'>
+            <h4 className='font-medium'>{title}</h4>
+            <p className='text-xs text-gray-500'>{date}</p>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
+
 
 export function ReportAnalyticsCard({ source, authorName, role, institution }) {
   return (
@@ -50,7 +76,7 @@ export function ReportAnalyticsCard({ source, authorName, role, institution }) {
       <BaseInput className={'w-full'} placeholder={'Enter Heading'} />
       <img src={source} className='overflow-auto' />
       <BigInput className={'w-full'} placeholder={'Enter Description'} />
-      <AppButton btnText={"Add to Report"}/>
+      <AppButton btnText={"Add to Report"} />
     </div>
   )
 }
