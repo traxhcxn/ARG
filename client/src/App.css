@@ -3,13 +3,13 @@
 }
 
 .menuItem{
-    background-color: #ffffff;
+    background-color: #ffffff/0;
     transition: background-color 0.5s;
     padding-left: 20px;
     padding-right: 20px;
 }
 .menuItem:hover{
-    background-color: #d9d9d9;
+    background-color: #ffffff;
 }
 .menuItem:active{
     border-left: 3px solid black;

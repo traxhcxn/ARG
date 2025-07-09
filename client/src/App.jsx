@@ -20,6 +20,10 @@ import InstitutionManageUsersContainer from './containers/Institution/Institutio
 import InstitutionLogsContainer from './containers/Institution/InstitutionLogsContainer'
 import InstitutionSettingsContainer from './containers/Institution/InstitutionSettingsContainer'
 import GuestPage from './pages/GuestPage'
+import FeaturesPage from './pages/FeaturesPage'
+import TestimonialsPage from './pages/TestimonialsPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
 	return (
@@ -27,6 +31,10 @@ function App() {
 			<ScrollToTop />
 			<Routes>
 				<Route path='/' element={<LandingPage />} />
+				<Route path='/features' element={<FeaturesPage />} />
+				<Route path='/testimonials' element={<TestimonialsPage />} />
+				<Route path='/about' element={<AboutPage />} />
+				<Route path='/contact' element={<ContactPage />} />
 				<Route path='/sign-up' element={<SignUpPage />} />
 				<Route path='/sign-up/other-users' element={<SignUpPageOther />} />
 				<Route path='/login' element={<LoginPage />} />

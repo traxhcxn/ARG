@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom'
 
 export function InsAdminMenu() {
     return (
-        <div className='fixed w-1/6 h-full border-r border-[#d2d2d2] flex flex-col justify-between'>
+        <div className='fixed w-1/6 h-full flex flex-col justify-between'>
             <div>
-                <div className='w-full h-[60px] flex items-center bg-base-100 px-5'>
+                <div className='w-full h-[64px] flex items-center bg-[#8CCDEB] backdrop-blur-md px-5'>
                     <Link to={'/institution-admin/home'}><IconButton source={'/logo.png'} /></Link>
                 </div>
                 <Link to={'/institution-admin/home'}><MenuItem source={home} menuItemTitle={"Home"} /></Link>
@@ -30,9 +30,9 @@ export function InsAdminMenu() {
 
 export function StaffMenu() {
     return (
-        <div className='fixed w-1/6 h-full border-r border-[#d2d2d2] flex flex-col justify-between'>
+        <div className='fixed w-1/6 h-full flex flex-col justify-between'>
             <div>
-                <div className='w-full h-[60px] flex items-center bg-base-100 px-5'>
+                <div className='w-full h-[64px] flex items-center bg-[#8CCDEB] backdrop-blur-md px-5'>
                     <Link to={'/staff/home'}><IconButton source={'/logo.png'} /></Link>
                 </div>
                 <Link to={'/staff/home'}><MenuItem source={home} menuItemTitle={"Home"} /></Link>
@@ -48,7 +48,7 @@ export function StaffMenu() {
 
 function MenuItem({ source, menuItemTitle }) {
     return (
-        <div className='w-full flex items-center gap-3 h-[60px] cursor-pointer menuItem'>
+        <div className="w-full bg-transparent flex items-center gap-3 h-[60px] cursor-pointer menuItem rounded-xl px-3 transition-colors hover:bg-white/20">
             <img src={source} className='size-6' />
             <p className='text-[17px] font-normal'>{menuItemTitle}</p>
         </div>

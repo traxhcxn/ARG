@@ -17,21 +17,21 @@ function GuestPage() {
 		setShowReports(!showReports)
 	}
 	return (
-		<>
+		<div className="flex flex-col min-h-screen bg-gradient-to-b from-[#8CCDEB] via-[#C0C9EE] to-white">
 			<GuestNavBar />
-			<div className='pt-24 pb-10 px-10 flex justify-between'>
-				<div className='border p-5 bg-accent rounded-md flex flex-col gap-5 min-h-[600px]'>
-					<StaffJoin joinBtnText={"Search Analytics"} onStaffJoinButtonClick={onAnalyticsButtonClicked}/>
-					{showAnalytics && (
+			<div className='pt-24 pb-10 px-10 flex justify-between' >
+				<div className='p-5 bg-white/80 rounded-2xl shadow-xl border border-[#C0C9EE] text-[#1F2343] flex flex-col gap-5 min-h-[600px]'>
+					<StaffJoin joinBtnText={"Search Analytics"} onStaffJoinButtonClick={onAnalyticsButtonClicked} />
+					{/*showAnalytics && (
 						<div className='grid grid-cols-2 gap-3'>
 							{Analytics.map((analytic) => (
 								<AnalyticsCard key={analytic.id} source={analytic.image} />
 							))}
 						</div>
-					)}
+					)*/}
 				</div>
-				<div className='border bg-accent p-5 rounded-md flex flex-col gap-5 min-h-[600px]'>
-					<StaffJoin joinBtnText={"Search Reports"} onStaffJoinButtonClick={onReportsButtonClicked}/>
+				<div className='p-5 bg-white/80 rounded-2xl shadow-xl border border-[#C0C9EE] text-[#1F2343] flex flex-col gap-5 min-h-[600px]'>
+					<StaffJoin joinBtnText={"Search Reports"} onStaffJoinButtonClick={onReportsButtonClicked} />
 					{showReports && (
 						<div className="overflow-x-auto w-full">
 							<table className="table border">
@@ -50,7 +50,7 @@ function GuestPage() {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	)
 }
 

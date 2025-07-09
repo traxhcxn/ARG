@@ -10,7 +10,7 @@ function StaffViewReportsContainer() {
         setShowReports(!showReports)
     }
     return (
-        <div className="flex-1 bg-accent m-3 p-5 border border-[#D2D2D2] rounded-xl h-full">
+        <div className="flex-1 m-3 p-5 h-full">
             <div className='flex flex-col items-center gap-5'>
                 <h3 className='text-xl font-semibold'>View Generated Reports for your Institution</h3>
                 <StaffJoin joinBtnText={"Search"} onStaffJoinButtonClick={onSearchButtonClick} />

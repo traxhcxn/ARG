@@ -32,14 +32,14 @@ function InstitutionManageReportsContainer() {
 		setShowManageContainer(!showManageContainer)
 	}
 	return (
-		<div className="flex-1 bg-accent m-3 p-5 border border-[#D2D2D2] rounded-xl">
+		<div className="flex-1 m-3 p-5">
 			<div className='flex flex-col items-center gap-5'>
 				<h3 className='text-xl font-semibold'>Create, View and Manage Generated Reports for your Institution</h3>
 				<div className='flex justify-center gap-5 w-full px-10'>
-					<AppButton btnText={'Create Report'} className={'w-48'} onClick={onCreateButtonClicked} />
-					<AppButton btnText={'Manage Reports'} className={'w-48'} onClick={onManageButtonClicked} />
+					<AppButton btnText={'Create Report'} className={'w-48 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors'} onClick={onCreateButtonClicked} />
+					<AppButton btnText={'Manage Reports'} className={'w-48 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors'} onClick={onManageButtonClicked} />
 				</div>
-				{showCreateContainer && (
+				{/*showCreateContainer && (
 					<>
 						<div className='flex gap-10'>
 							<SettingsBaseInput label={'Report Name'} placeholder={'Enter Report Name'} />
@@ -51,12 +51,12 @@ function InstitutionManageReportsContainer() {
 							))}
 						</div>
 					</>
-				)}
+				)*/}
 				{showManageContainer && (
 					<>
 						<div className='flex gap-10'>
 							<StaffJoin joinBtnText={"Search"} onStaffJoinButtonClick={onSearchButtonClick} />
-							<AppButton btnText={'Save Changes'} className={'w-48'} onClick={onSaveButtonClicked} />
+							<AppButton btnText={'Save Changes'} className={'w-48 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors'} onClick={onSaveButtonClicked} />
 						</div>
 						{showReports && (
 							<div className="overflow-x-auto my-5 px-5 w-full">
@@ -68,7 +68,7 @@ function InstitutionManageReportsContainer() {
 												<td><input type='checkbox' className='checkbox' defaultChecked={remove} /></td>
 												<td className='min-w-[690px]'>{report.name}</td>
 												<td>{report.dateAndTime}</td>
-												<td><div className='btn bg-accent border-none shadow-none'><img src={view} className='size-4' /></div></td>
+												<td><div className='btn shadow'><img src={view} className='size-4' /></div></td>
 											</tr>
 										))}
 									</tbody>

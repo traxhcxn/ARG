@@ -5,11 +5,13 @@ import Footer from '../components/Footer'
 
 function SignUpPageOther() {
   return (
-    <div className='flex flex-col items-center'>
+    <>
       <SignUpNavBar />
-      <OtherSignUpContainer />
-      <Footer />
-    </div>
+      <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#8CCDEB] via-[#C0C9EE] to-white pt-28">
+        <OtherSignUpContainer />
+        <Footer />
+      </div>
+    </>
   )
 }
 

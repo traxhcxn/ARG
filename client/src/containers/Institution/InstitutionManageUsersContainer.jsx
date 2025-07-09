@@ -20,10 +20,10 @@ function InstitutionManageUsersContainer() {
 		})
 	}
 	return (
-		<div className="flex-1 bg-accent m-3 py-5 border border-[#D2D2D2] rounded-xl">
+		<div className="flex-1 m-3 py-5">
 			<div className="join flex items-center h-12 px-5">
 				<div className='join-item px-5 bg-base-100 border h-full flex items-center'>Add a new Staff Member</div>
-				<AppButton btnText={'Generate UUID'} className={'join-item'} onClick={onGenerateButtonClick} />
+				<AppButton btnText={'Generate UUID'} className={'join-item w-50 h-[20px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors'} onClick={onGenerateButtonClick} />
 				<dialog id="uuidModal" className="modal">
 					<div className="modal-box">
 						<h3 className="font-semibold text-lg">UUID: {uuid}</h3>
@@ -38,7 +38,7 @@ function InstitutionManageUsersContainer() {
 				<table className="table border">
 					{/* head */}
 					<thead>
-						<tr className='bg-secondary'>
+						<tr className='bg-accent'>
 							<th>Name</th>
 							<th>Email</th>
 							<th>UUID</th>
@@ -58,7 +58,7 @@ function InstitutionManageUsersContainer() {
 				</table>
 			</div>
 			<div className='w-full flex justify-end px-5 pb-10'>
-				<AppButton btnText={'Save Changes'} className={'w-max'} onClick={onSaveButtonClicked}/>
+				<AppButton btnText={'Save Changes'} className={'w-max h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors'} onClick={onSaveButtonClicked}/>
 			</div>
 		</div>
 	)

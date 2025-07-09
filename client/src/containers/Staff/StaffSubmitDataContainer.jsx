@@ -35,27 +35,26 @@ function StaffSubmitDataContainer() {
         setFileType("")
     }
     return (
-        <div className="flex-1 bg-accent m-3 p-5 border border-[#D2D2D2] rounded-xl">
+        <div className="flex-1 m-3 p-5">
             <div className='w-full flex flex-col items-center gap-5'>
                 <div>
                     <h3 className='text-xl font-semibold'>Submit Data for Analytics</h3>
-                    <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. </p>
                 </div>
-                <StaffJoin joinBtnText={'Select FIle'} onStaffJoinButtonClick={() => document.getElementById('fileInput').click()} />
+                <StaffJoin joinBtnText={'Select File'} onStaffJoinButtonClick={() => document.getElementById('fileInput').click()} />
                 <div className='grid grid-cols-5 gap-10'>
                     <div className='col-span-3'>
                         {file && (
-                            <div>
-                                <div className='w-full flex items-center justify-center bg-secondary h-10'><p><strong>Preview</strong> - {file.name}</p></div>
+                            <div className='shadow'>
+                                <div className='w-full flex items-center justify-center shadow bg-base-100 h-10'><p><strong>Preview</strong> - {file.name}</p></div>
                                 {fileType.includes("image") && (<img src={file.content} alt="Preview" className="w-1/2 border rounded-b-md" />)}
                                 {fileType.includes("pdf") && (<iframe src={file.content} title="PDF Preview" className="w-full h-[690px] border" />)}
-                                {fileType.includes("text") && (<pre className="bg-base-100 p-3 border rounded-b-md">{file.content}</pre>)}
+                                {fileType.includes("text") && (<pre className="p-3 border rounded-b-md">{file.content}</pre>)}
                             </div>
                         )}
                     </div>
                     <div className='col-span-2'>
                         {file && (
-                            <div className='bg-secondary px-10 py-6 flex flex-col gap-3'>
+                            <div className='bg-base-100 rounded shadow border px-10 py-6 flex flex-col gap-3'>
                                 <p><strong>File Name:</strong> {file.name}</p>
                                 <p><strong>FIle Type:</strong> {file.type}</p>
                                 <p><strong>File Size:</strong> {(file.size / 1024).toFixed(2)} KB</p>
@@ -68,7 +67,7 @@ function StaffSubmitDataContainer() {
                                         <p>Role, Institution</p>
                                     </div>
                                 </div>
-                                <AppButton btnText={"Upload FIle"} className={"w-40 rounded self-center mt-5"} onClick={onUploadFileClick} />
+                                <AppButton btnText={"Upload File"} className={"w-40 rounded self-center mt-5 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onUploadFileClick} />
                             </div>
                         )}
                     </div>

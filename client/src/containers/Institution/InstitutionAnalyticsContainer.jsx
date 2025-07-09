@@ -69,23 +69,22 @@ function InstitutionAnalyticsContainer() {
 				<div className='w-full flex flex-col items-center gap-5 min-h-[575px]'>
 					<div>
 						<h3 className='text-xl font-semibold'>Upload Data for Analytics</h3>
-						<p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. </p>
 					</div>
-					<StaffJoin joinBtnText={'Select FIle'} onStaffJoinButtonClick={() => document.getElementById('fileInput').click()} />
+					<StaffJoin joinBtnText={'Select File'} onStaffJoinButtonClick={() => document.getElementById('fileInput').click()} />
 					<div className='grid grid-cols-5 gap-10'>
 						<div className='col-span-3'>
 							{file && (
 								<div>
-									<div className='w-full flex items-center justify-center bg-secondary h-10'><p><strong>Preview</strong> - {file.name}</p></div>
+									<div className='w-full flex items-center justify-center shadow bg-base-100 h-10'><p><strong>Preview</strong> - {file.name}</p></div>
 									{fileType.includes("image") && (<img src={file.content} alt="Preview" className="w-1/2 border rounded-b-md overflow-hidden" />)}
 									{fileType.includes("pdf") && (<iframe src={file.content} title="PDF Preview" className="w-full h-[690px] border overflow-hidden" />)}
-									{fileType.includes("text") && (<pre className="bg-base-100 p-3 border rounded-b-md overflow-hidden">{file.content}</pre>)}
+									{fileType.includes("text") && (<pre className="shadow p-3 border rounded-b-md overflow-hidden">{file.content}</pre>)}
 								</div>
 							)}
 						</div>
 						<div className='col-span-2'>
 							{file && (
-								<div className='bg-secondary px-10 py-6 flex flex-col gap-3'>
+								<div className='bg-base-100 rounded shadow border px-10 py-6 flex flex-col gap-3'>
 									<p><strong>File Name:</strong> {file.name}</p>
 									<p><strong>FIle Type:</strong> {file.type}</p>
 									<p><strong>File Size:</strong> {(file.size / 1024).toFixed(2)} KB</p>
@@ -98,7 +97,7 @@ function InstitutionAnalyticsContainer() {
 											<p>Role, Institution</p>
 										</div>
 									</div>
-									<AppButton btnText={"Upload FIle"} className={"w-40 rounded self-center mt-5"} onClick={onUploadFileClick} />
+									<AppButton btnText={"Upload File"} className={"w-40 rounded self-center mt-5 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onUploadFileClick} />
 								</div>
 							)}
 						</div>
@@ -112,19 +111,18 @@ function InstitutionAnalyticsContainer() {
 				<div className='w-full flex flex-col items-center gap-5 min-h-[575px]'>
 					<div>
 						<h3 className='text-xl font-semibold'>Approve Analytics for Reports</h3>
-						<p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec vehicula lectus, et hendrerit ante. Sed porttitor facilisis quam, eu euismod quam ullamcorper eu. </p>
 					</div>
-					<AppButton btnText={'Show Submitted Analytics'} onClick={onShowAnalyticsButtonClicked}/>
+					<AppButton btnText={'Show Submitted Analytics'} className={"w-60 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onShowAnalyticsButtonClicked} />
 					{showAnalytics && (
 						<>
-							<div className='grid grid-cols-3 gap-10'>
+							{/*<div className='grid grid-cols-3 gap-10'>
 								{Analytics.map((item) => (
 									<div key={item.id} id='analyticItem'><AdminAnalyticsCard source={item.image} className={'checkbox'} defaultChecked={remove} /></div>
 								))}
-							</div>
+							</div>*/}
 							<div className='w-full flex justify-center gap-5'>
-								<AppButton btnText={"Approve"} className={"w-40 rounded self-center mt-5"} onClick={onAproveButtonClicked} />
-								<AppButton btnText={"Reject"} className={"w-40 rounded self-center mt-5"} onClick={onRejectButtonClicked} />
+								<AppButton btnText={"Approve"} className={"w-40 rounded self-center mt-5 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onAproveButtonClicked} />
+								<AppButton btnText={"Reject"} className={"w-40 rounded self-center mt-5 h-[50px] bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onRejectButtonClicked} />
 							</div>
 						</>
 					)}

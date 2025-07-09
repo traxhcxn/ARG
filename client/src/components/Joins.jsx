@@ -20,7 +20,7 @@ export function StaffJoin({joinBtnText, selectOneStyle, selectTwoStyle, onStaffJ
                 <option>Technical Events</option>
                 <option>Non-Technical Events</option>
             </select>
-            <AppButton btnText={joinBtnText} className={"join-item min-w-20"} onClick={onStaffJoinButtonClick}/>
+            <AppButton btnText={joinBtnText} className={"join-item bg-[#1F2343] text-white border-none hover:bg-[#8CCDEB] hover:text-[#1F2343] transition-colors"} onClick={onStaffJoinButtonClick}/>
         </div>
     )
 }

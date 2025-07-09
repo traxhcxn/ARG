@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 function AdminNavBar() {
     return (
-        <div className="w-5/6 h-[60px] bg-base-100 flex items-center justify-between px-5 fixed userNavBar border-b border-[#d2d2d2] z-10">
+        <div className="navbar bg-gradient-to-r from-[#8CCDEB] via-[#C0C9EE] to-[#1F2343] w-5/6 h-[60px] bg-base-100 flex items-center justify-between px-5 fixed userNavBar z-10">
             <p className="text-xl">Institution Name</p>
             <div className='flex gap-1 items-center profileIcon' onClick={() => document.getElementById('profileModal').showModal()}>
                 <img src={profileIcon} className='size-7' />
@@ -14,20 +14,20 @@ function AdminNavBar() {
             </div>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="profileModal" className="modal">
-                <div className="modal-box">
+                <div className="modal-box bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-[#C0C9EE] p-6 flex flex-col gap-4">
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                     <div className='flex gap-5 items-center'>
-                        <img src={profilePic} className='size-48' />
+                        <img src={profilePic} className='size-48 rounded-2xl' />
                         <div className='flex flex-col'>
-                            <p>Someone Surname</p>
-                            <p>Role</p>
-                            <p>Example Institute of Science and Technology</p>
-                            <p>someone@example.com</p>
-                            <div className='mt-5'>
-                            <Link to={'/institution-admin/settings'}><button className='hidden btn bg-secondary text-black'>Edit Profile</button></Link>
-                            <Link to={'/'}><button className='btn  bg-secondary text-black'>Logout</button></Link>
+                            <p className="font-semibold text-lg text-[#1F2343]">Someone Surname</p>
+                            <p className="text-[#6B7280]">Role</p>
+                            <p className="text-[#1F2343]">Example Institute of Science and Technology</p>
+                            <p className="text-[#1F2343]">someone@example.com</p>
+                            <div className='mt-5 flex gap-2'>
+                                <Link to={'/institution-admin/settings'}><button className='hidden btn bg-secondary text-black'>Edit Profile</button></Link>
+                                <Link to={'/'}><button className='btn bg-[#8CCDEB] text-[#1F2343] border-none hover:bg-[#C0C9EE] hover:text-[#1F2343] transition-colors'>Logout</button></Link>
                             </div>
                         </div>
                     </div>
